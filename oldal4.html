@@ -1,0 +1,90 @@
+<script type="text/javascript">
+
+function checkform(){
+	var name = document.getElementById("name").value;
+	var concert = document.getElementById("concert").value;
+	var liveset = document.getElementById("liveset").value;
+	var song = document.getElementById("song").value;
+	
+	var notEmpty = 1;
+	
+	if(name == "") {
+		notEmpty = 0;
+	}
+	if(song < 0) {
+		notEmpty = 0;
+	}
+	if(liveset < 0) {
+		notEmpty = 0;
+	}
+	if(concert < 0) {
+		notEmpty = 0;
+	}
+	
+	if(notEmpty) {
+		var str = 'Hello ' + name
+		+ ' you know / were on: \n'
+		+ song + ' songs. \n'
+		+ liveset + ' livesets. \n'
+		+ concert + ' concerts.\n'
+		+ 'In total  '+ fanCalc(song, liveset, concert)
+		+ '\n'+ commentOrder(fanCalc(song, liveset, concert));
+		alert(str);
+	}
+}
+
+function fanCalc(song, liveset, concert) {
+	return 1 * song + 1 * liveset + 1 * concert;
+}
+
+function commentOrder(total) {
+	if(total <=5)
+		return 'You are not a real fan!';
+	if(total <= 25)
+		return 'You are an average fan.';
+	else
+		return 'You are a super fan!';
+}
+	
+</script>
+
+
+<table  width="75%" border="0" cellpadding="10" cellspacing="10">
+	<td>
+		<h1>How big fan are you?</h1>
+		<form>
+			<table>
+				<tr>
+					<td>Name:</td><td><input type="text" name="name" id ="name"/></td>
+				</tr>
+				<tr>
+					<td>Songs:</td><td><input type="text" name="song" id ="song"/></td>
+				</tr>
+				<tr>
+					<td>Livesets:</td><td><input type="text" name="liveset" id ="liveset"/></td>
+				</tr>
+				<tr>
+					<td>Concerts:</td><td><input type="text" name="concert" id ="concert"/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="button" value="GO" onclick = "checkform();"/></td>
+				</tr>
+		
+	
+			</table>
+		</form>
+		
+		<h2>Instruction of Use:</h2>
+		<i>Songs: How many Hardwell songs do you know.</i><br>
+		<i>Livesets: How many livesets have u seen.</i><br>
+		<i>Concerts: How many concerts have you been in.</i><br>
+		<i>If you filled up all the empty spaces then click on the "GO" button.</i>
+		
+		
+		<figure>
+			<img width="100%" height="100%" src="img/gohome.jpg">
+		</figure>
+		
+	</td>
+</table>
+	

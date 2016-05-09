@@ -1,0 +1,89 @@
+<style type ="text/css">
+body { 
+
+	font-family: sans-serif;
+	background-color: white;
+}
+
+#page {
+
+	margin: auto;
+	width : 75%;
+}
+
+#header {
+
+	margin: auto;
+	width : 100%;
+	background-color: black;
+}
+
+#mainMenu {
+	
+	min-height: 60px;
+	width: 100%;
+	background-color: #E1A95F;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#mainMenu ul li{
+	
+	display: inline-block;
+	border-radius: 10px;
+	border: solid 2px;
+	background-color: black;
+	font-size: 100%;
+	padding: 1%;
+	border-color: blue;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+}
+
+#mainMenu ul li:HOVER {
+	background-color: white;
+	box-shadow: 2px 2px 2px orange;
+}
+
+#banner {
+	margin: auto;
+	width: 100%;
+	min-height: 250px;
+	background-image: url("https://i.ytimg.com/vi/rhUvo4xj2oU/maxresdefault.jpg");
+}
+
+#content {
+	width: 100%;
+	min-height: 600px;
+	background-color: grey;
+	color: black;
+}
+
+
+#newsContainer {
+	width: 20%;
+	min-height: 40px;
+	background-color: #E1A95F;
+	float: right;
+}
+
+#newsContainer .newsItem {
+	margin: 10px;
+	background-color: white;
+	padding: 10px;
+	font-size: 15px
+	
+}
+
+#newsContainer .newsItem .newsTitle {
+	background-color: #E1A95F;
+	margin: 5px;
+	padding: 5px;
+	color: blue;
+	font-size: 15px;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+</style>
